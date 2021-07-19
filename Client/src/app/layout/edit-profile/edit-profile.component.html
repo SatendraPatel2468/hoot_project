@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="layout-main">
+<app-left-sidebar></app-left-sidebar>
+<div class="profilePage"></div>
+<div class="layout-content">
+    <div class="layout-content-body">
+        <div class="title-bar">
+
+            <h1 class="title-bar-title">
+              <span class="d-ib">Edit Profile </span>
+              <a class="m-l-10" routerLink="/home/profile"><small>Back to Profile</small></a>
+            </h1>
+        </div>
+        <div class="col-md-8 card panel-body" style="box-shadow: 0px 0px 14px #999;">
+            <div class="demo-form-wrapper">
+                <form class="form">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class=" control-label">Name</label>
+                            <input id="" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class=" control-label">Mobile</label>
+                            <input id="" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class=" control-label">Email ID</label>
+                            <input id="" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class=" control-label">City</label>
+                            <input id="" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group add-pic">
+                            <label class=" control-label">Add Images</label>
+                            <div class="pic-box">
+                                <div class="logoImg">
+                                    <img src="assets/img/3002121059.jpg" id="result">
+                                    <input id="logo-file" type="file" class="hide">
+                                    <label for="logo-file" class="btn btn-large"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="about" class=" control-label">Description</label>
+                            <textarea id="" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12">
+                        <div class="form-group">
+                            <button class="btn btn-primary " type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>
+</div>

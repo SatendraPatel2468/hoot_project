@@ -1,0 +1,40 @@
+<div class="login-middle">
+    <div class="login">
+        <div class="login-body">
+            <a class="login-brand" href="javascript:void(0)">
+                <img class="img-responsive" src="assets/img/logo-blk.png" alt="logo">
+            </a>
+            <div class="login-form">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off" class="mt-4">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="email" formControlName="email" [ngClass]="{'is-invalid': submitted && loginForm.email.errors}" />
+                        <div *ngIf="submitted && loginForm.email.errors" class="invalid-feedback">
+                            <div *ngIf="loginForm.email.errors.required">Email is required.</div>
+                            <div *ngIf="loginForm.email.errors.email">Enter must be a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" type="password" formControlName="password" [ngClass]="{'is-invalid': submitted && loginForm.password.errors}">
+                        <div *ngIf="submitted && loginForm.password.errors" class="invalid-feedback">
+                            <div *ngIf="loginForm.password.errors.required">Password is required.</div>
+                            <div *ngIf="loginForm.password.errors.minlength">Password must be at least 8 characters.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-control-primary custom-checkbox">
+              <input class="custom-control-input" type="checkbox" id="rememberMe" checked="checked">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-label">Remember me</span>
+            </label>
+                        <a routerLink="/forgot-password" class="pull-right">Forgot password?</a> <br>
+                        <a (click)="moveToRegister()" class="pull-right">Register</a>
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit" (click)="login()">Sign in</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
